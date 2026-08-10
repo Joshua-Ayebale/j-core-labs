@@ -1,0 +1,262 @@
+:root{
+    --jcore-card-bg-color:  #f2f4f7;
+    --jcore-sub-card-bg-color:#dddee0;
+    --jcore-bg-color:  #94a3b897;
+    --jcore-text-primary: #070d16;
+    --jcore-text-muted: #132135;
+    --border-light:#1c3350;
+}
+
+
+
+body{
+    background-color: var(--jcore-bg-color);
+    width: 95%;
+    margin: auto;
+}
+
+#image-logo{
+    width: 150px;
+    border-radius: 75px;
+    box-shadow: 5px 8px 2px #2b49085d;
+    padding: 10px;
+    
+}
+
+#header-section{
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    width: 95%;
+    margin:auto;
+    display: flex;
+    gap: 30px;
+    border-radius: 25px;
+    background-color: var(--jcore-card-bg-color);
+    
+
+}
+
+
+#header-section nav{
+    align-content: center;
+    width: 100%;
+}
+
+#header-section nav ul{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7,minmax(100px,1fr));
+    
+    
+    
+}
+
+#header-section nav ul li{
+    list-style-type: none;
+    
+     
+}
+
+#header-section nav ul li a{
+    text-decoration: none;
+    font-size: 1.8em;
+    font-family:sans-serif;
+    color: #0d264b;
+    font-weight: 600;
+
+}
+
+
+#header-section nav ul li a:hover{
+    color: #f4f5f7;
+    background-color: #0e67d4;
+    border-radius: 12px;
+    padding: 10px;
+    transform: scaleX(1.5);
+}
+#first-heading{
+    margin-top: 200px;
+    font-size: 3.5em;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-align: center;
+    columns: var(--jcore-text-primary);
+}
+
+#hero-box{
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    background-color: var(--jcore-card-bg-color);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+#hero-box h2{
+    font-size: 2.6em;
+    font-family: sans-serif;
+}
+#hero-p{
+    font-size: 2em;
+    font-family: sans-serif;
+}
+
+
+#hero-buttons{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#hero-buttons button{
+    font-size: 1.6em;
+    padding: 10px 20px 10px 20px;
+    border-radius: 12px;
+    border: 2px solid var(--border-light);
+}
+
+@keyframes glowing {
+    0%{
+        box-shadow:10px 15px 50px var(--border-light);
+
+    }
+
+    25%{
+        box-shadow:0px 0px 10px rgb(21, 23, 21),
+                    0px 0px 10px rgba(152, 244, 175, 0.747);
+    }
+
+    75%{
+        box-shadow:0px 0px 10px rgba(164, 208, 175, 0.375),
+                    0px 0px 10px rgba(6, 61, 20, 0.575);
+    }
+
+    100%{
+        box-shadow:10px 15px 50px var(--border-light);;
+    }
+}
+
+
+
+#hero-image{
+    width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 50px var(--border-light);
+    animation: glowing 2s ease-in-out infinite;
+}
+
+#hero-q{
+    font-size: 1.8em;
+    font-weight: 600;
+    text-align: center;
+}
+
+#card-container1,.pillar-card-container,#syllabus-container,.instructor,.student-hub{
+    display: flex;
+    gap: 50px;
+    width: 90%;
+    margin: auto;
+    background-color: var(--jcore-card-bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+#card-container1 .cards{
+    background-color:var(--jcore-sub-card-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+}
+
+#card-container1 .cards h3{
+    font-size: 2.2em;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: var(--jcore-text-primary);
+}
+
+#card-container1 .cards p,.syllabus-cards p,.about-instructor p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8em;
+}
+
+
+#pillars h3,#syllabus-heading,#instructor h2,#student-hub h2{
+    font-size: 2.5em;
+    font-family: sans-serif;
+    color: var(--jcore-text-muted);
+    font-weight: 700;
+    text-align: center;
+
+}
+
+#instructor-photo{
+    width: 500px;
+    border-radius: 250px;
+}
+
+.instructor{
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.pillar-cards,.syllabus-cards,.about-instructor,.card-StudentHub{
+    width: 40%;
+    background-color:var(--jcore-sub-card-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+.pillar-cards h4,.syllabus-cards h3{
+    font-size: 1.8em;
+    color: var(--jcore-text-primary);
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.pillar-cards img{
+    width: 300px;
+}
+
+
+.main-container{
+    width: 800px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.student-hub{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-StudentHub{
+    min-width: 100%;
+    height: 100%;
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+.carousel-btn:hover { background-color: rgba(0, 0, 0, 0.8); }
+hr{
+    height: 10px;
+    background-color: #d1ddef;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #132135;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+footer{
+    height: 400px;
+    width: 95%;
+    margin: auto;
+    background-color: #070d16;
+}
