@@ -87,7 +87,7 @@ body{
 #hero-box{
     display: flex;
     gap: 20px;
-    width: 90%;
+    width: 95%;
     margin: auto;
     background-color: var(--jcore-card-bg-color);
     border-radius: 15px;
@@ -157,7 +157,7 @@ body{
 #card-container1,.pillar-card-container,#syllabus-container,.instructor,.student-hub{
     display: flex;
     gap: 50px;
-    width: 90%;
+    width: 95%;
     margin: auto;
     background-color: var(--jcore-card-bg-color);
     padding: 30px;
