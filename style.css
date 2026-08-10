@@ -1,6 +1,6 @@
 :root{
     --jcore-card-bg-color:  #f2f4f7;
-    --jcore-sub-card-bg-color:#dddee0;
+    --jcore-sub-card-bg-color:hsl(217, 24%, 93%);
     --jcore-bg-color:  #94a3b897;
     --jcore-text-primary: #070d16;
     --jcore-text-muted: #132135;
