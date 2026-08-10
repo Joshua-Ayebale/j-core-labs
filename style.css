@@ -8,18 +8,23 @@
 }
 
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: var(--jcore-bg-color);
     width: 95%;
     margin: auto;
+    
 }
 
 #image-logo{
-    width: 150px;
+    width: 100%;
     border-radius: 75px;
     box-shadow: 5px 8px 2px #2b49085d;
-    padding: 10px;
+    padding: 5px;
+    grid-area: header-logo;
     
 }
 
@@ -29,8 +34,12 @@ body{
     top: 0px;
     width: 95%;
     margin:auto;
-    display: flex;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 60px;
+    grid-template-areas: 
+    "header-logo links";
+    gap: 10px;
     border-radius: 25px;
     background-color: var(--jcore-card-bg-color);
     
@@ -41,6 +50,7 @@ body{
 #header-section nav{
     align-content: center;
     width: 100%;
+    grid-area: links;
 }
 
 #header-section nav ul{
@@ -60,7 +70,7 @@ body{
 
 #header-section nav ul li a{
     text-decoration: none;
-    font-size: 1.8em;
+    font-size: 1.0em;
     font-family:sans-serif;
     color: #0d264b;
     font-weight: 600;
@@ -72,12 +82,12 @@ body{
     color: #f4f5f7;
     background-color: #0e67d4;
     border-radius: 12px;
-    padding: 10px;
-    transform: scaleX(1.5);
+    padding: 7px;
+    transform: scaleX(1.1);
 }
 #first-heading{
-    margin-top: 200px;
-    font-size: 3.5em;
+    margin-top: 65px;
+    font-size: 3.0em;
     font-family: sans-serif;
     font-weight: 800;
     text-align: center;
@@ -85,8 +95,18 @@ body{
 }
 
 #hero-box{
-    display: flex;
-    gap: 20px;
+    display: grid;
+    /*Define column widths and row heights*/
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: auto auto auto auto;
+
+    grid-template-areas: 
+    "hero-h hero-h"
+    "hero-p logo"
+    "cta-button ."
+    "hero-q .";
+
+    gap: 5px;
     width: 95%;
     margin: auto;
     background-color: var(--jcore-card-bg-color);
@@ -94,24 +114,41 @@ body{
     padding: 30px;
 }
 
+.hero-q{
+    grid-area: hero-q;
+}
+
+
+
+.hero-h{
+    grid-area: hero-h;
+}
+
+.hero-p{
+    grid-area: hero-p;
+}
+
 #hero-box h2{
-    font-size: 2.6em;
+    font-size: 2.0em;
     font-family: sans-serif;
+    
 }
 #hero-p{
-    font-size: 2em;
+    font-size: 1.4em;
     font-family: sans-serif;
+    
 }
 
 
 #hero-buttons{
     display: flex;
     justify-content: space-evenly;
+    grid-area: cta-button;
 
 }
 
 #hero-buttons button{
-    font-size: 1.6em;
+    font-size: 1.0em;
     padding: 10px 20px 10px 20px;
     border-radius: 12px;
     border: 2px solid var(--border-light);
@@ -141,20 +178,23 @@ body{
 
 
 #hero-image{
-    width: 500px;
-    padding: 20px;
+    width: 100%;
+    
+    padding: 5px;
     border-radius: 15px;
     box-shadow: 5px 5px 50px var(--border-light);
     animation: glowing 2s ease-in-out infinite;
+    grid-area: logo;
 }
 
 #hero-q{
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: 600;
     text-align: center;
+    
 }
 
-#card-container1,.pillar-card-container,#syllabus-container,.instructor,.student-hub{
+#card-container1,#syllabus-container,.student-hub{
     display: flex;
     gap: 50px;
     width: 95%;
@@ -173,7 +213,7 @@ body{
 }
 
 #card-container1 .cards h3{
-    font-size: 2.2em;
+    font-size: 1,6em;
     font-family: sans-serif;
     font-weight: 600;
     color: var(--jcore-text-primary);
@@ -181,12 +221,12 @@ body{
 
 #card-container1 .cards p,.syllabus-cards p,.about-instructor p{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.8em;
+    font-size: 1.2em;
 }
 
 
 #pillars h3,#syllabus-heading,#instructor h2,#student-hub h2{
-    font-size: 2.5em;
+    font-size: 1.9em;
     font-family: sans-serif;
     color: var(--jcore-text-muted);
     font-weight: 700;
@@ -194,17 +234,49 @@ body{
 
 }
 
-#instructor-photo{
-    width: 500px;
-    border-radius: 250px;
+
+
+
+
+.pillar-card-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "embedded web network";
+
+    gap: 50px;
+    width: 95%;
+    margin: auto;
+    background-color: var(--jcore-card-bg-color);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
-.instructor{
-    width: 80%;
-    justify-content: space-evenly;
+#embedded{
+    grid-area: embedded;
+
 }
 
-.pillar-cards,.syllabus-cards,.about-instructor,.card-StudentHub{
+#web{
+    grid-area: web;
+
+}
+
+#network{
+    grid-area: network;
+}
+
+.pillar-cards{
+    width: 100%;
+    background-color:var(--jcore-sub-card-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.syllabus-cards,.card-StudentHub{
     width: 40%;
     background-color:var(--jcore-sub-card-bg-color);
     border-radius: 20px;
@@ -213,16 +285,48 @@ body{
 
 
 .pillar-cards h4,.syllabus-cards h3{
-    font-size: 1.8em;
+    font-size: 1.2em;
     color: var(--jcore-text-primary);
     font-weight: 600;
     font-family: sans-serif;
 }
 
 .pillar-cards img{
-    width: 300px;
+    width: 200px;
 }
 
+
+.instructor{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "detail pic";
+    gap: 50px;
+    width: 95%;
+    margin: auto;
+    background-color: var(--jcore-card-bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.about-instructor{
+    grid-area: detail;
+    width: 100%;
+    background-color:var(--jcore-sub-card-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#instructor-photo{
+    width: 100%;
+    border-radius: 250px;
+}
+
+.profile-pic{
+    grid-area: pic;
+}
 
 .main-container{
     width: 800px;
