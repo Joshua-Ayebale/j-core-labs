@@ -5,6 +5,11 @@
     --jcore-text-primary: #070d16;
     --jcore-text-muted: #132135;
     --border-light:#1c3350;
+    --border-light:#1c3350;
+    --mediumBlue:#1d70b8;
+    --limeGreen:#84bd00;
+    --navyBlue:#0b2c4b;
+    --slateBlue: #1d3b4c;
 }
 
 
@@ -41,19 +46,19 @@ body{
     "header-logo links";
     gap: 10px;
     border-radius: 25px;
-    background-color: var(--jcore-card-bg-color);
+    background-color: var(--mediumBlue);
     
 
 }
 
 
-#header-section nav{
+.nav-drawer{
     align-content: center;
     width: 100%;
     grid-area: links;
 }
 
-#header-section nav ul{
+.nav-drawer ul{
     margin: auto;
     display: grid;
     grid-template-columns: repeat(7,minmax(100px,1fr));
@@ -62,13 +67,13 @@ body{
     
 }
 
-#header-section nav ul li{
+.nav-drawer ul li{
     list-style-type: none;
     
      
 }
 
-#header-section nav ul li a{
+.nav-drawer ul li a{
     text-decoration: none;
     font-size: 1.0em;
     font-family:sans-serif;
@@ -78,7 +83,7 @@ body{
 }
 
 
-#header-section nav ul li a:hover{
+.nav-drawer ul li a:hover{
     color: #f4f5f7;
     background-color: #0e67d4;
     border-radius: 12px;
@@ -276,7 +281,7 @@ body{
     padding: 20px;
 }
 
-.syllabus-cards,.card-StudentHub{
+.syllabus-cards{
     width: 40%;
     background-color:var(--jcore-sub-card-bg-color);
     border-radius: 20px;
@@ -328,26 +333,47 @@ body{
     grid-area: pic;
 }
 
-.main-container{
-    width: 800px;
-    overflow: hidden;
-    margin: 0 auto;
-}
+
 
 .student-hub{
-    width: 100%;
+    width: 95%;
     height: 100%;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(200px,1fr));
+    grid-template-rows: auto; 
+    
+       
 }
 
 .card-StudentHub{
-    min-width: 100%;
-    height: 100%;
+    background-color: var(--jcore-sub-card-bg-color);
+    border-radius: 15px;
+    padding: 5px 25px 0px 25px;
+
 }
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
-.carousel-btn:hover { background-color: rgba(0, 0, 0, 0.8); }
+
+.card-StudentHub img{
+    height: 130px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+
+.btn-projects{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-projects button{
+    font-size: 0.8em;
+    padding:6px 8px 6px 8px;
+    border-radius: 12px;
+    border: 2px solid var(--border-light);
+    cursor: pointer;
+}
+
 hr{
     height: 10px;
     background-color: #d1ddef;

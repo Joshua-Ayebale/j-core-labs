@@ -8,22 +8,44 @@
 </head>
 <body>
     <header>
+
         <div id="header-section">
         <img src="assets/jcore-logo.png" alt="" width="100px" id="image-logo">
         
 
-        <nav>
+        
+        <nav class="nav-drawer" id="nav-drawer">
+            
             <ul>
+
                 <li><a href="#home">Home</a></li>
-                <li><a href="">Our Tracks</a></li>
-                <li><a href="">Syllabus</a></li>
-                <li><a href="">Instructors</a></li>
-                <li><a href="">Student Hub</a></li>
+                <li><a href="#pillars">Our Tracks</a></li>
+                <li><a href="#syllabus">Syllabus</a></li>
+                <li><a href="#instructor">Instructors</a></li>
+                <li><a href="#student-hub">Student Hub</a></li>
                 <li><a href="">Projects</a></li>
                 <li><a href="">About</a></li>
+
             </ul>
+           
         </nav>
         </div>
+
+        <!--Hamburger Icon-->
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+        <!--Close Button-->
+
+                <button class="close-btn" id="close-btn">&times;</button>
+
+        <!--Dark overlay-->
+        <div class="overlay" id="overlay"></div>
+
+        
     </header>
 
     <h1 id="first-heading">J-Core Labs</h1>
@@ -93,7 +115,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="syllabus">
             <h3 id="syllabus-heading">Dynamic 15-week Syllabus Interractive Timeline</h3>
             <div id="syllabus-container">
                 <div class="syllabus-cards">
@@ -137,12 +159,12 @@
 
         <section id="student-hub">
             <h2>Student Hub</h2>
-            <div class="main-container">
+            
             <div class="student-hub">
                 <div class="card-StudentHub">
                     <h3>Smart Home Intruder</h3>
                     <img src="assets/intruderAlarm.png" alt="" height="300px">
-                    <div>
+                    <div class="btn-projects">
                         <button>View Project</button>
                         <button>Project Details</button>
                     </div>
@@ -150,7 +172,7 @@
                 <div class="card-StudentHub">
                     <h3>Automated Municipal Traffic Controller</h3>
                     <img src="assets/trafficLights.png" alt="" height="300px">
-                    <div>
+                    <div class="btn-projects">
                         <button>View Project</button>
                         <button>Project Details</button>
                     </div>
@@ -158,17 +180,15 @@
                 <div class="card-StudentHub">
                     <h3>Smart Trolley</h3>
                     <img src="assets/smartTrolley.png" alt="" height="300px">
-                    <div>
+                    <div class="btn-projects">
                         <button>View Project</button>
                         <button>Project Details</button>
                     </div>
 
                 </div>
             </div>
-
-                <button class="prev-btn" onclick="updateCarousel()">&#10094;</button>
-                <button class="next-btn">&#10095;</button>
-            </div>
+            
+            
         </section>
         <hr>
     </main>
